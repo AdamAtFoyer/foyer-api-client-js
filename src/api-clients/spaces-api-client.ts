@@ -1,6 +1,6 @@
 import { FoyerApiClientSearchRequest } from "../http-client";
 import { FoyerApiOKResponse, FoyerApiSearchResponse } from "../response";
-import { CreateSpaceViewModel, GetSasResponse, SpaceViewModel, SpaceViewModelOrderById, UpdateSpaceViewModel } from "../view-models/space-view-models";
+import { CreateSpaceViewModel, GetSasResponse, SpacesSearchRequest, SpaceViewModel, SpaceViewModelOrderById, UpdateSpaceViewModel } from "../view-models/space-view-models";
 import { BaseApiClient } from "./base-api-client";
 
 export class SpacesApiClient
@@ -33,7 +33,7 @@ export class SpacesApiClient
     }
 
     async search(
-        search: FoyerApiClientSearchRequest<SpaceViewModelOrderById> = {})
+        search: SpacesSearchRequest = {})
         : Promise<FoyerApiSearchResponse<SpaceViewModel>> {
         return this.restClient.search(search);
     }

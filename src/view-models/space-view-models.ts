@@ -1,4 +1,14 @@
+import { FoyerApiClientSearchRequest } from "../http-client";
+
 export type SpaceViewModelOrderById = 'name' | 'created_at';
+
+export type SpacesSearchRequest = { member_filters?: SpacesSearchRequestMemberFilter[] } & FoyerApiClientSearchRequest<SpaceViewModelOrderById>;
+
+/**
+ * For searching for Spaces with particular members (whether it be a user or group).
+ */
+export type SpacesSearchRequestMemberFilter = { user_id: string } | { group_id: string };
+
 /**
  * A View Model of a Space.
  * 
