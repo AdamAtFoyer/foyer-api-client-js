@@ -17,7 +17,7 @@ The Foyer API Client is designed to simplify the implementation of secure, inter
 To start, install the package using npm:
 
 ```bash
-npm install @usefoyer/api-client
+npm install @usefoyer/client
 ```
 
 ## Getting Started
@@ -25,7 +25,7 @@ npm install @usefoyer/api-client
 To use this library, initialize the `FoyerApiClient` with your API key:
 
 ```typescript
-import { FoyerApiClient } from '@usefoyer/api-client';
+import { FoyerApiClient } from '@usefoyer/client';
 
 const client = new FoyerApiClient({ apiKey: 'YOUR_API_KEY' });
 ```
@@ -40,7 +40,7 @@ Foyer's [client portal](https://usefoyer.com/features/client-portal) enables eas
 You may want to create new clients within your portal, set up their access, and verify their profiles. Here’s an example:
 
 ```typescript
-import { CreateUserViewModel, UpdateUserViewModel } from '@usefoyer/api-client';
+import { CreateUserViewModel, UpdateUserViewModel } from '@usefoyer/client';
 
 // Define a new client user profile
 const createUser: CreateUserViewModel = {
@@ -80,7 +80,7 @@ Groups help you organize users, allowing you to control access to spaces and con
 Below is an example of creating a group for VIP clients, updating it, and managing group members.
 
 ```typescript
-import { CreateGroupViewModel, UpdateGroupViewModel } from '@usefoyer/api-client';
+import { CreateGroupViewModel, UpdateGroupViewModel } from '@usefoyer/client';
 
 // Create a VIP group with specific users
 const createGroup: CreateGroupViewModel = {
@@ -106,7 +106,7 @@ Spaces in Foyer act as secure collaboration areas where users can exchange files
 Imagine setting up a space where your team can securely share onboarding documents and chat with a new client.
 
 ```typescript
-import { CreateSpaceViewModel, UpdateSpaceViewModel } from '@usefoyer/api-client';
+import { CreateSpaceViewModel, UpdateSpaceViewModel } from '@usefoyer/client';
 
 // Define space members, including the client and support staff
 const spaceDetails: CreateSpaceViewModel = {
@@ -156,7 +156,7 @@ Messaging in Foyer provides a private, encrypted channel for secure communicatio
 You can send updates or discuss documents within the space. For example, here’s how to send a welcome message:
 
 ```typescript
-import { CreateMessageViewModel } from '@usefoyer/api-client';
+import { CreateMessageViewModel } from '@usefoyer/client';
 
 // Send a welcome message to the client
 const welcomeMessage: CreateMessageViewModel = { content: 'Welcome! Please review the attached contract.' };
@@ -177,7 +177,7 @@ Foyer allows you to configure the portal experience for individual users using A
 You may want to configure a customized app view for a client, adding specific tools or settings relevant to their project.
 
 ```typescript
-import { SetAppUserCustomizationViewModel } from '@usefoyer/api-client';
+import { SetAppUserCustomizationViewModel } from '@usefoyer/client';
 
 const userId = 'clientId1';
 const appId = 'appId1';

@@ -1,7 +1,7 @@
 import { BlobClient, BlockBlobClient, ContainerClient, } from '@azure/storage-blob';
 import { HttpClient } from "../http-client";
 import { FoyerApiOKResponse, FoyerApiSearchResponse } from "../response";
-import { AddFileViewModel, AddFolderViewModel, FileModelOrderById, FilesSearchRequest, FileViewModel, RawAddFileViewModel, RawFileViewModel, SasResponse } from "../view-models/files-view-model";
+import { AddFileViewModel, AddFolderViewModel, FileModelOrderById, FilesSearchRequest, FileViewModel, RawAddFileViewModel, RawFileViewModel, SasResponse } from "../view-models/file-view-models";
 import { BaseApiClient } from "./base-api-client";
 import { v4 as uuidv4 } from 'uuid';
 import { urlJoin } from '../util';

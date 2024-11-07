@@ -1,6 +1,6 @@
 {
     "name": "@usefoyer/client",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "An API client library for the Foyer Client Portal API.",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
@@ -27,7 +27,7 @@
     "bugs": {
         "url": "https://github.com/usefoyer/foyer-js-client/issues"
     },
-    "homepage": "https://github.com/usefoyer/foyer-js-client#README.md",
+    "homepage": "https://usefoyer.com",
     "devDependencies": {
         "@types/node": "^22.9.0",
         "dotenv": "^16.3.1",
