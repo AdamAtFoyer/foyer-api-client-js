@@ -78,7 +78,7 @@ export class HttpClient {
         this.version = 'v1';
     }
 
-    async request<T>(req: FoyerApiClientRequest): T {
+    async request<T>(req: FoyerApiClientRequest): Promise<T> {
         const method = (req.method ?? 'GET').toUpperCase();
         const json = req.json;
         const config = {
