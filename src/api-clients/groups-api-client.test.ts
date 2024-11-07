@@ -43,6 +43,12 @@ test('Groups Client', async () => {
         });
         expect(searchResponse.count).toBe(1);
         expect(searchResponse.results[0]).toMatchObject(Object.assign({}, createVm, updateVm));
+
+        // confirm you can get the default groups without error
+        expect(await TEST_CLIENT.groups().getAllClientsGroup()).toBeTruthy();
+        expect(await TEST_CLIENT.groups().getAllStaffGroup()).toBeTruthy();
+        expect(await TEST_CLIENT.groups().getAllAdminsGroup()).toBeTruthy();
+        expect(await TEST_CLIENT.groups().getAllUsersGroup()).toBeTruthy();
     } finally {
         // delete the group when finished
         if (group) {

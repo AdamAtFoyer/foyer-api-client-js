@@ -17,6 +17,26 @@ export class GroupsApiClient
         return this.restClient.get(id);
     }
 
+    async getAllClientsGroup()
+        : Promise<GroupViewModel> {
+        return this.restClient.get('all_clients');
+    }
+
+    async getAllStaffGroup()
+        : Promise<GroupViewModel> {
+        return this.restClient.get('all_staff');
+    }
+
+    async getAllAdminsGroup()
+        : Promise<GroupViewModel> {
+        return this.restClient.get('all_admins');
+    }
+
+    async getAllUsersGroup()
+        : Promise<GroupViewModel> {
+        return this.restClient.get('all_users');
+    }
+
     async update(
         id: string,
         vm: UpdateGroupViewModel)
